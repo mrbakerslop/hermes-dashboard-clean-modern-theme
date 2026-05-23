@@ -1,0 +1,207 @@
+name: modern-clean-dark
+label: Modern Clean (Dark)
+description: Strict colour-only derivative of Modern Clean Light using shared structure plus a minimal dark colour map.
+
+palette:
+  background:
+    hex: "#080b10"
+    alpha: 1.0
+  midground:
+    hex: "#d7dde6"
+    alpha: 1.0
+  foreground:
+    hex: "#101722"
+    alpha: 0.92
+  warmGlow: "rgba(14, 20, 31, 0.32)"
+  noiseOpacity: 0.03
+
+componentStyles:
+  page:
+    background: "#080b10"
+  backdrop:
+    background: "#080b10"
+    fillerOpacity: "0"
+    fillerBlendMode: "normal"
+  header:
+    background: "#0b1018"
+    borderColor: "rgba(74, 86, 105, 0.58)"
+    boxShadow: "0 1px 0 rgba(6, 10, 16, 0.82)"
+    backdropFilter: "none"
+  card:
+    background: "rgba(16, 23, 34, 0.92)"
+    borderColor: "rgba(74, 86, 105, 0.58)"
+    boxShadow: "0 10px 28px rgba(0, 0, 0, 0.42), 0 1px 2px rgba(0, 0, 0, 0.38)"
+  tab:
+    background: "rgba(20, 29, 43, 0.78)"
+    borderColor: "rgba(74, 86, 105, 0.52)"
+  badge:
+    background: "rgba(25, 35, 51, 0.9)"
+    borderColor: "rgba(83, 96, 116, 0.6)"
+  progress:
+    background: "rgba(49, 61, 79, 0.74)"
+  footer:
+    background: "rgba(11, 16, 24, 0.92)"
+    borderColor: "rgba(74, 86, 105, 0.52)"
+
+colorOverrides:
+  card: "rgba(16, 23, 34, 0.92)"
+  cardForeground: "#dbe3ec"
+  popover: "#0d131d"
+  popoverForeground: "#e6edf5"
+  primary: "#d7e1ee"
+  primaryForeground: "#080b10"
+  secondary: "#182233"
+  secondaryForeground: "#dbe3ec"
+  muted: "#151e2c"
+  mutedForeground: "#9aa7b7"
+  accent: "#202c40"
+  accentForeground: "#e6edf5"
+  destructive: "#d47474"
+  destructiveForeground: "#080b10"
+  success: "#63d982"
+  warning: "#e4b16d"
+  border: "rgba(74, 86, 105, 0.58)"
+  input: "rgba(74, 86, 105, 0.62)"
+  ring: "#9aa7b7"
+
+customCSS: |
+  /* Modern Clean Dark critical colour map. Colour/background/border/shadow/text only; Light supplies structure. */
+  :root {
+    color-scheme: dark;
+    --background: #080b10;
+    --background-base: #080b10;
+  }
+
+  html,
+  body,
+  #root,
+  #root > div,
+  main,
+  [class*="bg-background"],
+  [class*="bg-background/base"],
+  [class*="bg-black"],
+  [class*="bg-white"] {
+    background-color: #080b10 !important;
+    background-image: none !important;
+    color: #dbe3ec !important;
+    -webkit-text-fill-color: #dbe3ec !important;
+  }
+
+  html body header[role="banner"],
+  html body aside > div:first-child,
+  html body .pointer-events-none.fixed.inset-0,
+  html body [class*="bg-card"],
+  html body [class*="bg-popover"] {
+    background-color: rgba(16, 23, 34, 0.94) !important;
+    background-image: none !important;
+    border-color: rgba(74, 86, 105, 0.58) !important;
+    box-shadow: 0 1px 0 rgba(6, 10, 16, 0.82) !important;
+    color: #dbe3ec !important;
+    -webkit-text-fill-color: #dbe3ec !important;
+  }
+
+  html body [class*="bg-muted"],
+  html body [class*="bg-secondary"],
+  html body [class*="bg-accent"],
+  html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]),
+  html body aside > div:has(> a[href="/sessions"]),
+  html body aside button,
+  html body aside [role="button"],
+  html body header button,
+  html body header [role="button"] {
+    background-color: rgba(20, 29, 43, 0.9) !important;
+    border-color: rgba(83, 96, 116, 0.62) !important;
+    box-shadow: inset 0 0 0 1px rgba(83, 96, 116, 0.28) !important;
+    color: #dbe3ec !important;
+    -webkit-text-fill-color: #dbe3ec !important;
+  }
+
+  html body h1,
+  html body h2,
+  html body h3,
+  html body h4,
+  html body h5,
+  html body h6,
+  html body [class*="CardTitle"],
+  html body [class*="text-foreground"],
+  html body [class*="text-midground"] {
+    color: #e6edf5 !important;
+    -webkit-text-fill-color: #e6edf5 !important;
+    text-shadow: none !important;
+  }
+
+  html body .text-muted-foreground,
+  html body [class*="text-muted-foreground"] {
+    color: #9aa7b7 !important;
+    -webkit-text-fill-color: #9aa7b7 !important;
+  }
+
+  html body svg,
+  html body [class*="border"],
+  html body input,
+  html body textarea,
+  html body select {
+    border-color: rgba(83, 96, 116, 0.62) !important;
+    color: inherit !important;
+    stroke: currentColor !important;
+  }
+
+  html body .text-success,
+  html body [class*="text-success"],
+  html body [class*="text-emerald"],
+  html body [class*="text-green"] {
+    color: #63d982 !important;
+    -webkit-text-fill-color: #63d982 !important;
+  }
+
+  html body .border-success,
+  html body [class*="border-success"],
+  html body [class*="border-emerald"],
+  html body [class*="border-green"] {
+    border-color: rgba(99, 217, 130, 0.54) !important;
+  }
+
+  html body .bg-success,
+  html body [class*="bg-success"],
+  html body [class*="bg-emerald"],
+  html body [class*="bg-green"] {
+    background-color: rgba(99, 217, 130, 0.16) !important;
+  }
+
+  html body .hermes-chat-xterm-host,
+  html body .hermes-chat-xterm-host .xterm,
+  html body .hermes-chat-xterm-host .xterm-screen,
+  html body .hermes-chat-xterm-host .xterm-viewport,
+  html body .xterm {
+    background-color: #080b10 !important;
+    color: #dbe3ec !important;
+    -webkit-text-fill-color: #dbe3ec !important;
+  }
+
+  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span,
+  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span,
+  html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span,
+  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span {
+    font-size: 0 !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span::after,
+  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span::after,
+  html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span::after,
+  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span::after {
+    content: "MODERN CLEAN\A(DARK)" !important;
+    display: block !important;
+    white-space: pre !important;
+    font-family: var(--theme-font-sans) !important;
+    font-size: 0.58rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.018em !important;
+    line-height: 1.1 !important;
+    background-color: #141d2b !important;
+    color: #e6edf5 !important;
+    -webkit-text-fill-color: #e6edf5 !important;
+    border-color: rgba(83, 96, 116, 0.62) !important;
+    text-transform: uppercase !important;
+  }

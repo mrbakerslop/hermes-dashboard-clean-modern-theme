@@ -1,0 +1,16 @@
+name: modern-clean-light
+label: Modern Clean (Light)
+description: Plain light dashboard theme using soft grey tones with Ubuntu and Ubuntu Mono.
+
+palette:
+  background:
+    hex: "#f7f7f5"
+    alpha: 1.0
+  midground:
+    hex: "#2f3437"
+    alpha: 1.0
+  foreground:
+    hex: "#ffffff"
+    alpha: 0.85
+  warmGlow: "rgba(220, 224, 228, 0.22)"
+  noiseOpacity: 0.08

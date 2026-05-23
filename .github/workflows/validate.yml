@@ -1,0 +1,38 @@
+name: Validate Modern Clean Theme
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Build and validate theme artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: python3 -m pip install -r requirements.txt
+
+      - name: Build generated theme files
+        run: python3 scripts/build.py
+
+      - name: Validate Modern Clean theme constraints
+        run: python3 scripts/validate.py
+
+      - name: Ensure generated artifacts are committed
+        run: |
+          if ! git diff --exit-code -- dist/; then
+            echo "Generated dist artifacts are out of date. Run python3 scripts/build.py and commit the result."
+            exit 1
+          fi

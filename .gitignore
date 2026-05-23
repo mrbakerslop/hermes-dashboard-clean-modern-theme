@@ -1,0 +1,10 @@
+# Local/runtime artifacts
+__pycache__/
+*.pyc
+.DS_Store
+
+# Visual QA scratch captures unless deliberately added
+screenshots/tmp/
+
+# Temporary validation output
+.tmp/

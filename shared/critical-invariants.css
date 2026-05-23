@@ -1,0 +1,139 @@
+/* Modern Clean protected invariants: must stay early and inside the dashboard 32 KiB customCSS cap. */
+
+/* Hermes Agent wordmark: approved logo treatment. Do not alter for incidental theme polish. */
+body aside > div:first-child .text-midground[style*="plus-lighter"],
+body aside > div:first-child span[class*="font-sans"][style*="mix-blend-mode"] {
+  font-family: var(--font-sans) !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+  font-size: 1.38rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.0525rem !important;
+  line-height: 0.95 !important;
+  mix-blend-mode: normal !important;
+  text-transform: uppercase !important;
+}
+
+body header:not([role="banner"]) .text-midground[style*="plus-lighter"],
+body header:not([role="banner"]) span[class*="font-sans"][style*="mix-blend-mode"] {
+  font-family: var(--font-sans) !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  line-height: 0.95 !important;
+  mix-blend-mode: normal !important;
+  text-transform: uppercase !important;
+}
+
+/* Sidebar width: preserve the approved narrow desktop rail. */
+@media (min-width: 1024px) {
+  html body #app-sidebar,
+  html body aside#app-sidebar {
+    width: 12rem !important;
+    min-width: 12rem !important;
+    max-width: 12rem !important;
+    flex: 0 0 12rem !important;
+  }
+}
+
+/* Theme switcher selected label: keep approved two-line label. */
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] span.truncate,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] span[class*="truncate"] {
+  display: block !important;
+  max-width: 4.95rem !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-align: center !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] span.truncate::before,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] span[class*="truncate"]::before {
+  content: "MODERN CLEAN\A(LIGHT)";
+  display: block !important;
+  white-space: pre-line !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1.02 !important;
+  text-transform: uppercase !important;
+}
+
+/* Sidebar footer version/org: keep vX.Y.Z and Nous Research on one line. */
+html body aside > div[class*="border-t"]:has(> a[href="https://nousresearch.com"]) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.58rem !important;
+  min-width: 0 !important;
+  padding-left: 0.78rem !important;
+  padding-right: 0.78rem !important;
+}
+
+html body aside > div[class*="border-t"]:has(> a[href="https://nousresearch.com"]) > *,
+html body aside > div[class*="border-t"]:has(> a[href="https://nousresearch.com"]) > a[href="https://nousresearch.com"] {
+  flex: 0 0 auto !important;
+  min-width: max-content !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+
+html body aside > div[class*="border-t"]:has(> a[href="https://nousresearch.com"]) > a[href="https://nousresearch.com"] {
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.12em !important;
+  line-height: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Button polarity: Light uses pale neutral buttons; header controls are handled separately to avoid double borders. */
+html body main :is(button, [role="button"])[class][class]:not([class*="destructive"]) {
+  font-family: var(--theme-font-sans) !important;
+  background: #f3f4f5 !important;
+  background-color: #f3f4f5 !important;
+  border: 1px solid rgba(192, 198, 204, 0.58) !important;
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  box-shadow: inset 0 0 0 1px rgba(192, 198, 204, 0.24) !important;
+}
+
+html body main :is(button, [role="button"])[class][class]:not([class*="destructive"]):hover {
+  background: #e2e8f0 !important;
+  background-color: #e2e8f0 !important;
+  border-color: rgba(100, 116, 139, 0.78) !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+/* Logs controls: keep filter labels, segmented options, header badges, and header controls all-caps. */
+html body main div[role="toolbar"] :is(span, button, [role="radio"]),
+html body main div[role="toolbar"] :is(span, button, [role="radio"]) *,
+html body header[role="banner"] :is(span, label, button, [role="button"]),
+html body header[role="banner"] :is(span, label, button, [role="button"]) * {
+  text-transform: uppercase !important;
+}
+
+/* Page-header adjacent status: readable pills/badges beside titles on every route. */
+html body header[role="banner"] h1 + div :is(span, a, button, [role="button"])[class] {
+  min-height: 1.55rem !important;
+  padding: 0.2rem 0.55rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.055em !important;
+  line-height: 1.1 !important;
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  background-color: #eef0f2 !important;
+  border: 1px solid rgba(185, 190, 195, 0.72) !important;
+  opacity: 1 !important;
+}

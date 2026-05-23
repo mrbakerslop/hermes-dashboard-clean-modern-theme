@@ -1,0 +1,10 @@
+/* LIGHT_ONLY_START */
+/* Kanban priority badges: keep yellow, but make it legible on Modern Clean Light. */
+html body .hermes-kanban .hermes-kanban-priority {
+  background: #ffe08a !important;
+  background-color: #ffe08a !important;
+  color: #4a3414 !important;
+  -webkit-text-fill-color: #4a3414 !important;
+  border-color: rgba(150, 98, 18, 0.62) !important;
+}
+/* LIGHT_ONLY_END */

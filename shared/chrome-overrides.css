@@ -1,0 +1,1501 @@
+/* Critical success green colour: darker only for light-background readability. */
+html body .text-success,
+html body [class*="text-success"],
+html body [class*="text-emerald"],
+html body [class*="text-green"] {
+  color: #1f5a35 !important;
+  -webkit-text-fill-color: #1f5a35 !important;
+}
+
+html body .border-success,
+html body [class*="border-success"],
+html body [class*="border-emerald"],
+html body [class*="border-green"] {
+  border-color: rgba(31, 90, 53, 0.52) !important;
+}
+
+html body .bg-success,
+html body [class*="bg-success"],
+html body [class*="bg-emerald"],
+html body [class*="bg-green"] {
+  background-color: rgba(31, 90, 53, 0.14) !important;
+}
+
+
+/* Desktop sidebar width: preserve the approved narrow rail before the live customCSS cap. */
+@media (min-width: 1024px) {
+  html body #app-sidebar,
+  html body aside#app-sidebar {
+    width: 12rem !important;
+    min-width: 12rem !important;
+    max-width: 12rem !important;
+    flex: 0 0 12rem !important;
+  }
+}
+
+/* Sidebar page links: approved compact treatment; casing restored without changing row geometry. */
+html body aside nav a,
+html body aside nav [role="link"],
+html body aside [role="navigation"] a {
+  background: transparent !important;
+  color: #3f4750 !important;
+  -webkit-text-fill-color: #3f4750 !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.012em !important;
+  padding-left: 0.78rem !important;
+  padding-right: 0.78rem !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  gap: 0.6rem !important;
+}
+
+html body aside nav a *,
+html body aside nav [role="link"] *,
+html body aside [role="navigation"] a *,
+html body aside nav a span.truncate,
+html body aside [role="navigation"] a span.truncate {
+  text-transform: uppercase !important;
+  letter-spacing: 0.012em !important;
+}
+
+/* Final chrome override: beat bundled font-mono/group button specificity in the sidebar top/bottom bars. */
+body aside button[class],
+body aside button[class*="group"][class*="relative"][class*="cursor-pointer"],
+body aside button[class*="group"][class*="relative"][class*="flex"],
+body aside button[class*="group"][class*="relative"][class*="grid"],
+body aside [role="button"][class],
+body aside button[class*="font-mono"],
+body aside button[class*="group"] {
+  font-family: var(--theme-font-sans) !important;
+  background-color: #f3f4f5 !important;
+  border-color: rgba(192, 198, 204, 0.74) !important;
+  color: #27313b !important;
+  -webkit-text-fill-color: #27313b !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  box-shadow: inset 0 0 0 1px rgba(192, 198, 204, 0.38) !important;
+}
+
+body aside button[class]:hover,
+body aside [role="button"][class]:hover {
+  background-color: #e8ebee !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+}
+
+body aside button[class] *,
+body aside [role="button"][class] *,
+body header button[class] *,
+body header [role="button"][class] * {
+  font-family: var(--theme-font-sans) !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Header action buttons: neutral at rest; animated stroke only on mouse hover. */
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class] {
+  position: relative !important;
+  min-height: 2.15rem !important;
+  isolation: isolate !important;
+  overflow: visible !important;
+  border: 1px solid rgba(192, 198, 204, 0.58) !important;
+  background: #f3f4f5 !important;
+  background-color: #f3f4f5 !important;
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  box-shadow: inset 0 0 0 1px rgba(192, 198, 204, 0.24) !important;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class]:hover {
+  border-color: rgba(100, 116, 139, 0.78) !important;
+  background: #e2e8f0 !important;
+  background-color: #e2e8f0 !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.62), 0 1px 2px rgba(71, 85, 105, 0.08) !important;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class]::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1.25px;
+  opacity: 0 !important;
+  transition: opacity 200ms;
+  background: linear-gradient(160deg, transparent 0%, var(--foreground) 15%, var(--midground) 20%, var(--background) 25%, transparent 35%, transparent 40%, var(--foreground) 55%, var(--midground) 60%, var(--background) 65%, transparent 75%, transparent 80%, var(--foreground) 95%, var(--midground) 100%);
+  background-size: 300% 300%;
+  animation: none !important;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class]:hover::before {
+  opacity: 1 !important;
+  animation: gradient-stroke 2.23s linear infinite !important;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class] > .arc-border,
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class] > .arc-border::before {
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class]:hover > .arc-border {
+  opacity: 1 !important;
+}
+
+html body header[role="banner"] :is(button, [role="button"], a[href])[class][class]:hover > .arc-border::before {
+  animation: gradient-stroke 2.23s linear infinite !important;
+}
+
+/* Chat: move Copy Last Response control outside the embedded TUI pane on desktop. */
+@media (min-width: 1024px) {
+  html body div:has(> .hermes-chat-xterm-host + button[aria-label="Copy last assistant response"]) {
+    overflow: visible !important;
+  }
+
+  html body .hermes-chat-xterm-host + button[aria-label="Copy last assistant response"] {
+    left: calc(100% + 0.75rem) !important;
+    right: auto !important;
+    bottom: 0 !important;
+    top: auto !important;
+    z-index: 20 !important;
+  }
+}
+
+:root {
+  color-scheme: light;
+  --background: #f7f7f5;
+  --background-base: #f7f7f5;
+}
+
+html,
+body,
+#root,
+#root > div,
+main {
+  background: #f7f7f5 !important;
+  color: #25292d;
+}
+
+body {
+  text-transform: none;
+  font-family: var(--theme-font-sans) !important;
+}
+
+button,
+input,
+textarea,
+select,
+[role="button"],
+.font-sans,
+.font-mondwest,
+.font-expanded,
+[class*="font-mondwest"],
+[class*="font-expanded"] {
+  font-family: var(--theme-font-sans) !important;
+}
+
+code,
+kbd,
+pre,
+samp,
+.font-mono,
+.font-mono-ui,
+.font-courier,
+[class*="font-mono"],
+[class*="font-courier"] {
+  font-family: var(--theme-font-mono) !important;
+}
+
+.uppercase {
+  text-transform: none;
+}
+
+/* Critical page-header container recovery: restore visibility/layout without broad child selectors. */
+html body header[role="banner"] {
+  display: flex !important;
+  position: relative !important;
+  z-index: 20 !important;
+  min-height: 84px !important;
+  height: 84px !important;
+  padding: 0 !important;
+  background: #f7f7f5 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(190, 195, 200, 0.55) !important;
+  box-shadow: 0 1px 0 rgba(185, 190, 195, 0.36) !important;
+  color: #20262d !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html body header[role="banner"] > div {
+  min-height: 84px !important;
+  height: 84px !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  align-items: center !important;
+}
+
+html body header[role="banner"] h1,
+html body header[role="banner"] span,
+html body header[role="banner"] button,
+html body header[role="banner"] input {
+  visibility: visible !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+/* Critical page-header title treatment: title-only sizing/casing, without altering header controls. */
+html body header[role="banner"] h1,
+html body header[role="banner"] h1.font-expanded,
+html body header[role="banner"] h1[class*="font-expanded"],
+html body header[role="banner"] h1[class*="text-sm"] {
+  display: block !important;
+  font-size: 1.38rem !important;
+  font-weight: 700 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+  mix-blend-mode: normal !important;
+  text-shadow: none !important;
+  white-space: nowrap !important;
+}
+
+html body header[role="banner"] button,
+html body header[role="banner"] button *,
+html body header[role="banner"] [role="button"],
+html body header[role="banner"] [role="button"] *,
+html body header[role="banner"] span[class*="tabular-nums"],
+html body header[role="banner"] [class*="tabular-nums"] {
+  text-transform: uppercase !important;
+}
+
+/* Skills page header enabled-count text: uppercase only; keep size, colour, and spacing unchanged. */
+html body header[role="banner"] h1 + div > span.whitespace-nowrap.text-xs.text-muted-foreground {
+  text-transform: uppercase !important;
+}
+
+/* Critical section header casing: Cron/Profiles list headings only; keep size unchanged. */
+html body main h2[class*="items-center"][class*="gap-2"][class*="text-muted-foreground"] {
+  text-transform: uppercase !important;
+}
+
+/* Cron profile filter label: uppercase label only; keep dropdown and sizing unchanged. */
+html body main label[for="cron-profile-filter"] {
+  text-transform: uppercase !important;
+}
+/* Sidebar plugin/system casing: uppercase only; keep size, colour, and layout unchanged. */
+html body aside #hermes-sidebar-plugin-nav-heading,
+html body aside > div[class*="border-t"][class*="flex-col"] > span,
+html body aside a[href="/sessions"],
+html body aside a[href="/sessions"] *,
+html body aside > div[class*="border-t"][class*="flex-col"] ul,
+html body aside > div[class*="border-t"][class*="flex-col"] ul * {
+  text-transform: uppercase !important;
+}
+
+/* Chat sidebar model selector: keep the model control compact and aligned with LIVE. */
+html body aside > div[class*="items-center"][class*="justify-between"]:has(button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"])) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  overflow: visible !important;
+}
+
+html body aside > div[class*="items-center"][class*="justify-between"]:has(button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"])) > div:first-child {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  max-width: calc(100% - 4.4rem) !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 8.5rem !important;
+  max-width: min(100%, 12rem) !important;
+  height: 2.25rem !important;
+  min-height: 2.25rem !important;
+  padding: 0 0.72rem !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.55rem !important;
+  overflow: hidden !important;
+  background: rgba(247, 247, 245, 0.96) !important;
+  border: 1px solid rgba(185, 190, 195, 0.78) !important;
+  border-radius: 0 !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), 0 1px 2px rgba(70, 76, 82, 0.06) !important;
+  text-decoration: none !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) span,
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) span.truncate {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) svg {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+  flex: 0 0 0.9rem !important;
+  color: #64717d !important;
+  opacity: 1 !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]):hover {
+  background: #eef0f2 !important;
+  border-color: rgba(148, 163, 184, 0.82) !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+  text-decoration: none !important;
+}
+
+html body aside > div[class*="items-center"][class*="justify-between"]:has(button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"])) [class*="Badge"],
+html body aside > div[class*="items-center"][class*="justify-between"]:has(button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"])) span[class*="uppercase"] {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+  white-space: nowrap !important;
+}
+
+/* Sidebar footer switchers: keep Theme and Language side by side. */
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
+  display: grid !important;
+  grid-template-columns: 7.2rem 3.05rem !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  width: min(100%, 10.65rem) !important;
+  max-width: 10.65rem !important;
+  min-width: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) > div.relative {
+  min-width: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"],
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] {
+  display: flex !important;
+  width: 7.2rem !important;
+  min-width: 7.2rem !important;
+  max-width: 7.2rem !important;
+  flex: 0 0 7.2rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding: 0 0.58rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span {
+  display: grid !important;
+  grid-template-columns: 1.05rem minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 0.42rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] svg,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] svg {
+  width: 1.18rem !important;
+  height: 1.18rem !important;
+  flex: 0 0 1.18rem !important;
+  margin: 0 !important;
+  color: #4b5563 !important;
+  stroke-width: 2.15 !important;
+  opacity: 1 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span {
+  position: relative !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-transform: none !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span::after,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span::after {
+  content: "MODERN CLEAN\A(LIGHT)" !important;
+  display: block !important;
+  white-space: pre !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1.1 !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
+  display: flex !important;
+  width: 3.05rem !important;
+  min-width: 3.05rem !important;
+  max-width: 3.05rem !important;
+  flex: 0 0 3.05rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding: 0 0.28rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.22rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] .fi {
+  flex: 0 0 auto !important;
+  font-size: 0.88rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span > span:not(.fi) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+}
+
+/* Sidebar lower panel: make system actions, switchers, and footer read as one clean unit. */
+html body aside > div:has(> a[href="/sessions"]),
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) {
+  padding-top: 0.2rem !important;
+  padding-bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  border-top: 1px solid rgba(185, 190, 195, 0.48) !important;
+  border-bottom: 0 !important;
+}
+
+html body aside > div:has(> a[href="/sessions"]) > span,
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > span {
+  padding-bottom: 0.18rem !important;
+}
+
+html body aside > div:has(> a[href="/sessions"]) > a[href="/sessions"],
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > a[href="/sessions"] {
+  padding-top: 0.08rem !important;
+  padding-bottom: 0.42rem !important;
+}
+
+html body aside > div:has(> a[href="/sessions"]) > ul,
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > ul {
+  margin-top: 0 !important;
+  transform: none !important;
+}
+
+html body aside > div:has(> a[href="/sessions"]) > ul > li:last-child,
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > ul > li:last-child {
+  border-bottom: 1px solid rgba(185, 190, 195, 0.42) !important;
+}
+
+html body aside > div:has(> a[href="/sessions"]) > ul > li:last-child > *,
+html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > ul > li:last-child > * {
+  padding-bottom: 0.7rem !important;
+}
+
+html body aside > div[class*="border-t"]:has(> div button[aria-haspopup="listbox"]) {
+  margin-top: 0 !important;
+  padding-top: 0.58rem !important;
+  padding-bottom: 0.58rem !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(185, 190, 195, 0.42) !important;
+}
+
+html body aside > div[class*="border-t"]:has(> div button[aria-haspopup="listbox"]) + div[class*="border-t"] {
+  padding-top: 0.52rem !important;
+  padding-bottom: 0.52rem !important;
+  background: rgba(255, 255, 255, 0.58) !important;
+  border-top: 0 !important;
+}
+
+/* The bundled backdrop is tuned for dark themes; neutralise its dark blend layers. */
+.pointer-events-none.fixed.inset-0.z-\[1\],
+.pointer-events-none.fixed.inset-0.z-\[2\],
+.pointer-events-none.fixed.inset-0.z-\[99\],
+.pointer-events-none.fixed.inset-0.z-\[101\] {
+  background: #f7f7f5 !important;
+  background-image: none !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
+.pointer-events-none.fixed.inset-0.z-\[2\] img,
+.theme-default-filler {
+  display: none !important;
+}
+
+.pointer-events-none.fixed.inset-0.z-\[99\],
+.pointer-events-none.fixed.inset-0.z-\[101\] {
+  opacity: 0 !important;
+}
+
+.bg-black,
+.bg-black\/60,
+[class*="bg-black"],
+[class*="bg-background-base"] {
+  background-color: #f7f7f5 !important;
+}
+
+.bg-background,
+.bg-background\/40,
+.bg-background\/85,
+[class*="bg-background"] {
+  background-color: rgba(247, 247, 245, 0.92) !important;
+}
+
+.bg-card,
+.bg-card\/80,
+[class*="bg-card"] {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+.bg-muted,
+.bg-muted\/30,
+[class*="bg-muted"] {
+  background-color: rgba(238, 240, 242, 0.9) !important;
+}
+
+.text-midground {
+  color: #2f3437 !important;
+}
+
+/* Ensure headings and titles stay readable on the light theme. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+[class*="CardTitle"],
+.blend-lighter,
+[class*="blend-lighter"],
+[class*="text-foreground"],
+[class*="text-midground/"] {
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  mix-blend-mode: normal !important;
+  opacity: 1 !important;
+}
+
+.text-muted-foreground,
+[class*="text-muted-foreground"] {
+  color: #5f6b76 !important;
+  -webkit-text-fill-color: #5f6b76 !important;
+}
+
+/* Card title treatment: uppercase title text across built-in and plugin dashboard cards. */
+[class*="bg-card"] h3,
+[class*="bg-card"] [class*="uppercase"],
+[class*="bg-card"] [class*="card-title"],
+[class*="bg-card"] [class*="CardTitle"],
+[class*="bg-card"] [data-card-title],
+.rounded-xl.border h3,
+.rounded-xl.border [class*="card-title"],
+.rounded-xl.border [class*="CardTitle"],
+.ha-card-title,
+.hermes-kanban-card-title {
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* Site-wide badge baseline: keep provider/status/tool pills readable and consistent. */
+html body span[class*="font-compressed"][class*="uppercase"],
+html body span[class*="inline-flex"][class*="uppercase"][class*="tracking"],
+html body main span[class*="text-[11px]"][class*="uppercase"],
+html body main span[class*="text-[0.6rem]"],
+html body main span[class*="text-[10px]"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 1.45rem !important;
+  padding: 0.18rem 0.55rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+}
+
+/* Keys page tool badges under provider descriptions: make WEB_SEARCH / WEB_EXTRACT easier to read. */
+html body main [class*="grid"][class*="gap-2"] > p + div span[class*="text-[0.6rem]"],
+html body main [class*="grid"][class*="gap-2"] > p + div [class*="text-[0.6rem]"],
+html body main span[class*="text-[0.6rem]"][class*="px-1.5"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 1.45rem !important;
+  padding: 0.18rem 0.55rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+}
+
+/* Readable card-header count badges, including the Skills page "88 SKILLS" counter. */
+html body main [class*="bg-card"] [class*="CardHeader"] [class*="text-[10px]"],
+html body main [class*="bg-card"] [class*="CardHeader"] [class*="tabular-nums"],
+html body main [class*="bg-card"] div:has(> h3) > span[class*="text-[10px]"],
+html body main [class*="bg-card"] div:has(> h3) > [class*="badge"],
+html body main [class*="bg-card"] div:has(> h3) > [class*="Badge"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 2rem !important;
+  padding: 0.35rem 0.75rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+  border-radius: 0 !important;
+}
+
+/* Preserve normal casing for card descriptions, metadata, form fields, and body copy. */
+[class*="bg-card"] p,
+[class*="bg-card"] small,
+[class*="bg-card"] label,
+[class*="bg-card"] input,
+[class*="bg-card"] textarea,
+[class*="bg-card"] select,
+.rounded-xl.border p,
+.rounded-xl.border small,
+.rounded-xl.border label,
+.rounded-xl.border input,
+.rounded-xl.border textarea,
+.rounded-xl.border select {
+  text-transform: none;
+}
+
+/* Replace the bundled cream/beige input-token colour with slate across charts and tables. */
+[class*="bg-[#ffe6cb]"],
+[class*="bg-[#ffe6cb]/70"] {
+  background-color: #94a3b8 !important;
+}
+
+[class*="text-[#ffe6cb]"] {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+/* Keep dashboard buttons in a light grey/slate range instead of dark teal/charcoal. */
+button,
+[role="button"] {
+  border-color: rgba(148, 163, 184, 0.65) !important;
+}
+
+/* Consistent action-button chrome: text labels such as Config "Save" render in capitals. */
+html body button,
+html body [role="button"] {
+  text-transform: uppercase !important;
+  letter-spacing: 0.045em !important;
+}
+
+html body button svg,
+html body [role="button"] svg {
+  letter-spacing: normal !important;
+}
+
+button[class*="bg-midground"],
+button[class*="bg-background"],
+button[class*="bg-black"],
+button[class*="bg-destructive"],
+button:not([class*="bg-transparent"]):not([class*="bg-card"]):not([class*="bg-muted"]),
+[role="button"][class*="bg-midground"],
+[role="button"][class*="bg-background"],
+[role="button"][class*="bg-black"],
+[role="button"][class*="bg-destructive"] {
+  background-color: #e2e8f0 !important;
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.55), 0 1px 2px rgba(71, 85, 105, 0.08) !important;
+}
+
+button[class*="bg-transparent"],
+button[class*="ghost"],
+[role="button"][class*="bg-transparent"] {
+  color: #334155 !important;
+}
+
+button:hover,
+[role="button"]:hover {
+  background-color: #cbd5e1 !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"] {
+  background-color: #edf1f5 !important;
+  color: #8a96a3 !important;
+  -webkit-text-fill-color: #8a96a3 !important;
+  box-shadow: none !important;
+}
+
+/* Modern Clean Light should use one calm Ubuntu voice in the dashboard chrome. */
+aside,
+aside *,
+header,
+header * {
+  font-family: var(--theme-font-sans) !important;
+  text-transform: none !important;
+}
+
+aside a,
+aside button,
+aside span,
+aside p,
+header button,
+header span {
+  letter-spacing: normal !important;
+}
+
+
+/* Top/sidebar chrome: replace remaining pale-blue/white control blocks with soft neutral grey. */
+aside > div:first-child,
+header {
+  background: rgba(247, 247, 245, 0.96) !important;
+  border-color: rgba(190, 195, 200, 0.55) !important;
+}
+
+aside nav a,
+aside nav [role="link"],
+aside [role="navigation"] a {
+  background: transparent !important;
+  color: #3f4750 !important;
+  -webkit-text-fill-color: #3f4750 !important;
+  /* Keep the full page list visible in the narrower sidebar without scroll. */
+  padding-left: 0.78rem !important;
+  padding-right: 0.78rem !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  gap: 0.6rem !important;
+}
+
+aside nav a:hover,
+aside nav a[aria-current="page"],
+aside nav a[class*="bg-"] {
+  background: #eef0f2 !important;
+  color: #1f2933 !important;
+  -webkit-text-fill-color: #1f2933 !important;
+}
+
+aside button,
+aside [role="button"],
+header button,
+header [role="button"] {
+  background-color: #f1f3f4 !important;
+  border-color: rgba(185, 190, 195, 0.72) !important;
+  color: #27313b !important;
+  -webkit-text-fill-color: #27313b !important;
+  box-shadow: inset 0 0 0 1px rgba(185, 190, 195, 0.32) !important;
+}
+
+aside button:hover,
+aside [role="button"]:hover,
+header button:hover,
+header [role="button"]:hover {
+  background-color: #e4e8eb !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+}
+
+aside svg,
+header svg {
+  color: #64717d !important;
+  stroke: currentColor !important;
+}
+
+html body aside [class*="px-5"][class*="whitespace-nowrap"],
+html body aside [class*="px-5"][class*="tracking-[0.1em]"] {
+  padding-left: 0.78rem !important;
+  padding-right: 0.78rem !important;
+  gap: 0.6rem !important;
+}
+
+/* Sidebar footer switchers: complete live-safe pass before the API CSS payload cap. */
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
+  display: grid !important;
+  grid-template-columns: 7.2rem 3.05rem !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  width: min(100%, 10.65rem) !important;
+  max-width: 10.65rem !important;
+  min-width: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) > div.relative {
+  min-width: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"],
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] {
+  display: flex !important;
+  width: 7.2rem !important;
+  min-width: 7.2rem !important;
+  max-width: 7.2rem !important;
+  flex: 0 0 7.2rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding: 0 0.58rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span {
+  display: grid !important;
+  grid-template-columns: 1.05rem minmax(0, 1fr) !important;
+  align-items: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  gap: 0.42rem !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] svg,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] svg {
+  width: 1.18rem !important;
+  height: 1.18rem !important;
+  flex: 0 0 1.18rem !important;
+  align-self: center !important;
+  justify-self: center !important;
+  margin: 0 !important;
+}
+
+/* Sidebar theme selector label: force compact two-line all-caps text early enough for the live theme payload. */
+html body aside button[aria-haspopup="listbox"]:has(svg) > span > span,
+html body aside button[title*="theme"][aria-label*="theme"] > span > span,
+html body aside button[title*="Theme"][aria-label*="Theme"] > span > span,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span {
+  position: relative !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg) > span > span::after,
+html body aside button[title*="theme"][aria-label*="theme"] > span > span::after,
+html body aside button[title*="Theme"][aria-label*="Theme"] > span > span::after,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span::after,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span::after {
+  content: "MODERN CLEAN\A(LIGHT)" !important;
+  display: block !important;
+  white-space: pre !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1.1 !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+/* Sidebar language selector: compact, same-height, and visually centred beside the Theme control. */
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] {
+  width: 3.05rem !important;
+  min-width: 3.05rem !important;
+  max-width: 3.05rem !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
+  box-sizing: border-box !important;
+  display: flex !important;
+  width: 3.05rem !important;
+  min-width: 3.05rem !important;
+  max-width: 3.05rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span {
+  display: grid !important;
+  grid-template-columns: 0.88rem 0.78rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  justify-items: center !important;
+  column-gap: 0.16rem !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  margin: 0 auto !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] .fi {
+  flex: 0 0 auto !important;
+  width: 0.88rem !important;
+  font-size: 0.82rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+  transform: translateY(0.01rem) !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span > span:not(.fi) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 0.78rem !important;
+  min-width: 0 !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.012em !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+/* Logs page toolbar controls: match the all-caps header-control system. */
+html body [role="toolbar"][aria-label="Logs"],
+html body [role="toolbar"][aria-label="Logs"] *,
+html body [role="toolbar"][aria-label="Logs"] label,
+html body [role="toolbar"][aria-label="Logs"] button,
+html body [role="toolbar"][aria-label="Logs"] [role="button"],
+html body [role="toolbar"][aria-label="Logs"] [data-state] {
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: uppercase !important;
+}
+
+html body [role="toolbar"][aria-label="Logs"] label,
+html body [role="toolbar"][aria-label="Logs"] button,
+html body [role="toolbar"][aria-label="Logs"] [role="button"],
+html body [role="toolbar"][aria-label="Logs"] [data-state] {
+  background: rgba(226, 232, 240, 0.86) !important;
+  border-color: rgba(185, 190, 195, 0.72) !important;
+  color: #27313b !important;
+  -webkit-text-fill-color: #27313b !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.42) !important;
+}
+
+html body [role="toolbar"][aria-label="Logs"] button:hover,
+html body [role="toolbar"][aria-label="Logs"] [role="button"]:hover,
+html body [role="toolbar"][aria-label="Logs"] [data-state]:hover {
+  background: rgba(203, 213, 225, 0.92) !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+/* Sessions page source badges: make the database/source labels easier to read. */
+html body main [class*="text-[10px]"]:has(svg),
+html body main [class*="self-center"][class*="text-[10px]"],
+html body main [class*="shrink-0"][class*="text-[10px]"]:has(svg) {
+  min-height: 2.15rem !important;
+  padding: 0.42rem 0.78rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.055em !important;
+  line-height: 1.15 !important;
+  text-transform: uppercase !important;
+}
+
+html body main [class*="text-[10px]"]:has(svg) svg,
+html body main [class*="shrink-0"][class*="text-[10px]"]:has(svg) svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  margin-right: 0.4rem !important;
+}
+
+/* Darker success green across every success/connected UI token in this theme. */
+html body .text-success,
+html body [class*="text-success"],
+html body [class*="text-emerald"],
+html body [class*="text-green"] {
+  color: #1f5a35 !important;
+  -webkit-text-fill-color: #1f5a35 !important;
+}
+
+html body .border-success,
+html body [class*="border-success"],
+html body [class*="border-emerald"],
+html body [class*="border-green"] {
+  border-color: rgba(31, 90, 53, 0.52) !important;
+}
+
+html body .bg-success,
+html body [class*="bg-success"],
+html body [class*="bg-emerald"],
+html body [class*="bg-green"] {
+  background-color: rgba(31, 90, 53, 0.14) !important;
+}
+
+/* Models page model-card badges: improve provider readability and align model-family tags. */
+html body main [class*="bg-card"] [class*="mt-1"] [class*="text-[9px]"] {
+  min-height: 1.45rem !important;
+  padding: 0.24rem 0.62rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.055em !important;
+  line-height: 1.1 !important;
+  text-transform: uppercase !important;
+}
+
+html body main [class*="bg-card"] [class*="space-y-3"] > div:last-child > span,
+html body main [class*="bg-card"] span[class*="bg-muted"][class*="font-medium"] {
+  height: 1.5rem !important;
+  min-height: 1.5rem !important;
+  box-sizing: border-box !important;
+  padding: 0 0.56rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.25rem !important;
+  border: 1px solid rgba(185, 190, 195, 0.52) !important;
+  border-radius: 0 !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.62rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.045em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+}
+
+html body main [class*="bg-card"] [class*="space-y-3"] > div:last-child > span svg {
+  width: 0.625rem !important;
+  height: 0.625rem !important;
+  flex: 0 0 0.625rem !important;
+}
+
+html body main [class*="bg-card"] [class*="space-y-3"] > div:last-child > span[class*="bg-muted"],
+html body main [class*="bg-card"] span[class*="bg-muted"][class*="font-medium"] {
+  background: rgba(238, 240, 242, 0.9) !important;
+  color: #4b5563 !important;
+  -webkit-text-fill-color: #4b5563 !important;
+}
+
+/* In-page section headers, form labels, and dropdown controls: keep dashboard chrome all-caps. */
+html body main h2,
+html body main h2 *,
+html body main label,
+html body main label *,
+html body main [role="combobox"],
+html body main [role="combobox"] *,
+html body main [aria-haspopup="listbox"],
+html body main [aria-haspopup="listbox"] *,
+html body main select,
+html body main select *,
+html body [role="listbox"],
+html body [role="listbox"] *,
+html body [role="option"],
+html body [role="option"] * {
+  font-family: var(--theme-font-sans) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.045em !important;
+  text-transform: uppercase !important;
+}
+
+html body main label,
+html body main [role="combobox"],
+html body main [aria-haspopup="listbox"],
+html body main select {
+  color: #27313b !important;
+  -webkit-text-fill-color: #27313b !important;
+}
+
+html body main {
+  padding-top: 0 !important;
+}
+
+/* Chat page model switcher: make the dropdown read as a deliberate control. */
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) {
+  min-width: 8.5rem !important;
+  max-width: 100% !important;
+  min-height: 2.25rem !important;
+  height: 2.25rem !important;
+  padding: 0 0.72rem !important;
+  justify-content: space-between !important;
+  gap: 0.55rem !important;
+  background: rgba(247, 247, 245, 0.96) !important;
+  border: 1px solid rgba(185, 190, 195, 0.78) !important;
+  border-radius: 0 !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.52), 0 1px 2px rgba(70, 76, 82, 0.06) !important;
+  text-decoration: none !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) span,
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) span.truncate {
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.1 !important;
+  text-transform: none !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]) svg {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
+  color: #64717d !important;
+  opacity: 1 !important;
+}
+
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]):hover {
+  background: #eef0f2 !important;
+  border-color: rgba(148, 163, 184, 0.82) !important;
+  color: #171b20 !important;
+  -webkit-text-fill-color: #171b20 !important;
+  text-decoration: none !important;
+}
+
+/* Bottom sidebar switchers: centre the whole control group and size both controls deliberately. */
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
+  display: grid !important;
+  grid-template-columns: 7.2rem 3.05rem !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  gap: 0.4rem !important;
+  width: min(100%, 10.65rem) !important;
+  max-width: 10.65rem !important;
+  min-width: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) > div.relative {
+  min-width: 0 !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg),
+html body aside button[title*="theme"][aria-label*="theme"],
+html body aside button[title*="Theme"][aria-label*="Theme"],
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button {
+  display: flex !important;
+  width: 7.2rem !important;
+  min-width: 7.2rem !important;
+  max-width: 7.2rem !important;
+  flex: 0 0 7.2rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding: 0 0.58rem !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg) svg,
+html body aside button[title*="theme"][aria-label*="theme"] svg,
+html body aside button[title*="Theme"][aria-label*="Theme"] svg,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button svg,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button svg {
+  width: 1.18rem !important;
+  height: 1.18rem !important;
+  flex: 0 0 1.18rem !important;
+  align-self: center !important;
+  justify-self: center !important;
+  margin: 0 !important;
+  color: #4b5563 !important;
+  stroke-width: 2.15 !important;
+  opacity: 1 !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg) > span,
+html body aside button[title*="theme"][aria-label*="theme"] > span,
+html body aside button[title*="Theme"][aria-label*="Theme"] > span,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span {
+  display: grid !important;
+  grid-template-columns: 1.05rem minmax(0, 1fr) !important;
+  align-items: center !important;
+  height: 100% !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  gap: 0.42rem !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg) > span > span,
+html body aside button[title*="theme"][aria-label*="theme"] > span > span,
+html body aside button[title*="Theme"][aria-label*="Theme"] > span > span,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span {
+  position: relative !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  overflow: visible !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  white-space: normal !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-transform: none !important;
+}
+
+html body aside button[aria-haspopup="listbox"]:has(svg) > span > span::after,
+html body aside button[title*="theme"][aria-label*="theme"] > span > span::after,
+html body aside button[title*="Theme"][aria-label*="Theme"] > span > span::after,
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button > span > span::after,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button > span > span::after {
+  content: "MODERN CLEAN\A(LIGHT)" !important;
+  display: block !important;
+  white-space: pre !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.58rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1.1 !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
+  display: flex !important;
+  width: 3.05rem !important;
+  min-width: 3.05rem !important;
+  max-width: 3.05rem !important;
+  flex: 0 0 3.05rem !important;
+  height: 2.65rem !important;
+  min-height: 2.65rem !important;
+  padding: 0 0.28rem !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.22rem !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] .fi {
+  flex: 0 0 auto !important;
+  font-size: 0.88rem !important;
+  line-height: 1 !important;
+  margin: 0 !important;
+}
+
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span > span:not(.fi) {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.018em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  color: #20262d !important;
+  -webkit-text-fill-color: #20262d !important;
+}
+
+/* Site-wide badges: square corners, including status/source/provider pills. */
+html body span[class*="font-compressed"][class*="uppercase"],
+html body span[class*="inline-flex"][class*="uppercase"][class*="tracking"],
+html body span[class*="rounded"][class*="uppercase"],
+html body [class*="badge"],
+html body [data-badge],
+html body [class*="Badge"] {
+  border-radius: 0 !important;
+}
+
+html body span[class*="font-compressed"][class*="uppercase"]::before,
+html body span[class*="font-compressed"][class*="uppercase"]::after,
+html body span[class*="inline-flex"][class*="uppercase"][class*="tracking"]::before,
+html body span[class*="inline-flex"][class*="uppercase"][class*="tracking"]::after {
+  border-radius: 0 !important;
+}
+
+/* Keys page: make OAuth flow/status badges easier to read and keep inline code neutral. */
+html body main span[class*="font-compressed"][class*="uppercase"][class*="text-[11px]"],
+html body main span[class*="font-compressed"][class*="uppercase"][class*="text-\\[11px\\]"] {
+  min-height: 1.45rem !important;
+  padding: 0.24rem 0.5rem !important;
+  font-family: var(--theme-font-sans) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.065em !important;
+  line-height: 1 !important;
+  border-radius: 0 !important;
+}
+
+html body main code {
+  background-color: rgba(238, 240, 242, 0.96) !important;
+  background-image: none !important;
+  border: 1px solid rgba(185, 190, 195, 0.55) !important;
+  border-radius: 0 !important;
+  color: #27313b !important;
+  -webkit-text-fill-color: #27313b !important;
+  mix-blend-mode: normal !important;
+  transition: none !important;
+}
+
+html body main code span {
+  background: transparent !important;
+  -webkit-text-fill-color: inherit !important;
+  mix-blend-mode: normal !important;
+}
+
+html body main code::selection,
+html body main code *::selection {
+  background: #d9dde1 !important;
+  color: #202428 !important;
+  -webkit-text-fill-color: #202428 !important;
+}
+
+/* Keep the Theme dropdown menu readable even though the trigger itself is compact. */
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > div[role="listbox"],
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) div[aria-label="Theme"][role="listbox"],
+html body aside div[aria-label="Theme"][role="listbox"] {
+  width: 17.5rem !important;
+  min-width: 17.5rem !important;
+  max-width: min(22rem, calc(100vw - 2rem)) !important;
+  overflow-x: hidden !important;
+}
+
+html body aside div[aria-label="Theme"][role="listbox"] [role="option"],
+html body aside div[aria-label="Theme"][role="listbox"] [role="option"] > div {
+  min-width: 0 !important;
+}
+
+html body aside div[aria-label="Theme"][role="listbox"] [role="option"] span.truncate {
+  max-width: none !important;
+}
+
+/* Site-wide square-corner pass: Modern Clean Light should be rectilinear throughout. */
+html body,
+html body *:not(svg):not(path):not(circle):not(ellipse):not(line):not(polyline):not(polygon),
+html body *:not(svg):not(path):not(circle):not(ellipse):not(line):not(polyline):not(polygon)::before,
+html body *:not(svg):not(path):not(circle):not(ellipse):not(line):not(polyline):not(polygon)::after {
+  border-radius: 0 !important;
+}
+
+/* Final specificity pass for controls that previously had their own rounded trigger rules. */
+html body aside button[title][class*="normal-case"][class*="tracking-normal"]:not([aria-haspopup="listbox"]),
+html body aside button[aria-haspopup="listbox"],
+html body aside button[aria-haspopup="listbox"] > span,
+html body aside button[aria-haspopup="listbox"] *:not(svg):not(path),
+html body aside > div[class*="border-t"] > div > div.relative:first-child > button,
+html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button,
+html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
+  border-radius: 0 !important;
+}
+
+::selection {
+  background: #d9dde1;
+  color: #202428;
+}

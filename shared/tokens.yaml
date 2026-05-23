@@ -1,0 +1,63 @@
+typography:
+  fontSans: '"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+  fontMono: '"Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace'
+  fontDisplay: '"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+  fontUrl: "https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap"
+  baseSize: "20px"
+  lineHeight: "1.7"
+  letterSpacing: "-0.004em"
+
+layout:
+  radius: "0"
+  density: spacious
+
+layoutVariant: standard
+
+componentStyles:
+  page:
+    background: "#f7f7f5"
+  backdrop:
+    background: "#f7f7f5"
+    fillerOpacity: "0"
+    fillerBlendMode: "normal"
+  header:
+    background: "#f7f7f5"
+    borderColor: "rgba(185, 190, 195, 0.55)"
+    boxShadow: "0 1px 0 rgba(185, 190, 195, 0.36)"
+    backdropFilter: "none"
+  card:
+    background: "rgba(255, 255, 255, 0.82)"
+    borderColor: "rgba(190, 195, 200, 0.55)"
+    boxShadow: "0 10px 28px rgba(70, 76, 82, 0.07), 0 1px 2px rgba(70, 76, 82, 0.06)"
+  tab:
+    background: "rgba(238, 240, 242, 0.72)"
+    borderColor: "rgba(190, 195, 200, 0.45)"
+  badge:
+    background: "rgba(238, 240, 242, 0.88)"
+    borderColor: "rgba(185, 190, 195, 0.55)"
+  progress:
+    background: "rgba(210, 215, 220, 0.72)"
+  footer:
+    background: "rgba(247, 247, 245, 0.88)"
+    borderColor: "rgba(185, 190, 195, 0.45)"
+
+colorOverrides:
+  card: "rgba(255, 255, 255, 0.82)"
+  cardForeground: "#25292d"
+  popover: "#ffffff"
+  popoverForeground: "#25292d"
+  primary: "#3f464d"
+  primaryForeground: "#ffffff"
+  secondary: "#eceff1"
+  secondaryForeground: "#30363b"
+  muted: "#eef0f2"
+  mutedForeground: "#6b737a"
+  accent: "#dde1e5"
+  accentForeground: "#25292d"
+  destructive: "#b85c5c"
+  destructiveForeground: "#ffffff"
+  success: "#1f5a35"
+  warning: "#7c2d12"
+  border: "rgba(185, 190, 195, 0.55)"
+  input: "rgba(185, 190, 195, 0.58)"
+  ring: "#8d969e"

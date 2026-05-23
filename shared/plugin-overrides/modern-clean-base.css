@@ -1,0 +1,27 @@
+/* Achievements plugin: Modern Clean Light text-overlap guards; theme-only, no core/plugin edits. */
+html body .ha-hero{align-items:flex-start!important;flex-wrap:wrap!important} html body .ha-hero h1{line-height:1.02!important;letter-spacing:-.035em!important;overflow-wrap:anywhere!important}
+html body .ha-hero p,html body .ha-scan-banner-text,html body .ha-scan-banner-text p{min-width:0!important;overflow-wrap:anywhere!important}
+html body .ha-stats{grid-template-columns:repeat(auto-fit,minmax(10.5rem,1fr))!important} html body .ha-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr))!important}
+html body .ha-toolbar,html body .ha-pills,html body .ha-latest-row,html body .ha-tier-legend,html body .ha-scan-banner-head{min-width:0!important;flex-wrap:wrap!important}
+html body .ha-card{min-width:0!important;min-height:0!important} html body .ha-card-head{grid-template-columns:2.9rem minmax(0,1fr)!important;align-items:start!important;gap:.7rem .8rem!important}
+html body .ha-card-title-wrap{min-width:0!important} html body .ha-card-title{line-height:1.16!important;letter-spacing:.025em!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto!important}
+html body .ha-badges{grid-column:2/-1!important;justify-self:start!important;align-items:flex-start!important;flex-direction:row!important;flex-wrap:wrap!important;max-width:100%!important}
+html body .ha-stat-value,html body .ha-chip,html body .ha-tier-step,html body .ha-pills button,html body .ha-tier-badge,html body .ha-state-badge,html body .ha-share-trigger,html body .ha-criteria summary,html body .ha-progress-text,html body .ha-evidence-title{max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important;line-height:1.18!important;text-align:left!important}
+html body .ha-progress-row,html body .ha-evidence{min-width:0!important;flex-wrap:wrap!important} html body .ha-progress-track{min-width:8rem!important}
+@media (max-width:700px){html body .ha-card-head{grid-template-columns:2.7rem minmax(0,1fr)!important}html body .ha-badges,html body .ha-progress-text{grid-column:1/-1!important}}
+
+/* Kanban board: restore responsive columns for Modern Clean Light; theme-only, no core/plugin edits. */
+html body .hermes-kanban{width:100%!important;max-width:100%!important;min-width:0!important}
+html body .hermes-kanban-columns{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,17.5rem),1fr))!important;gap:.75rem!important;align-items:start!important;overflow-x:visible!important;scrollbar-width:auto!important;min-width:0!important}
+html body .hermes-kanban-columns::-webkit-scrollbar{display:initial!important}
+html body .hermes-kanban-column{flex:1 1 auto!important;width:100%!important;max-width:100%!important;min-width:0!important}
+html body .hermes-kanban-card,html body .hermes-kanban-card-content,html body .hermes-kanban-card-row{min-width:0!important;max-width:100%!important}
+
+/* Cronalytics no-agent badges: neutral theme colour, profile-scoped; no core/plugin edits. */
+html body span[style*="font-size: 0.6rem"][style*="text-transform: uppercase"][style*="opacity: 0.7"] {
+  opacity: 1 !important;
+  background-color: rgba(238, 240, 242, 0.96) !important;
+  color: #25292d !important;
+  -webkit-text-fill-color: #25292d !important;
+  border: 1px solid rgba(185, 190, 195, 0.72) !important;
+}
