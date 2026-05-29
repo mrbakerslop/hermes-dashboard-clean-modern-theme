@@ -59,7 +59,7 @@ colorOverrides:
   border: rgba(74, 86, 105, 0.58)
   input: rgba(74, 86, 105, 0.62)
   ring: '#9aa7b7'
-name: modern-clean-dark
+name: modern-clean-dark-v2
 label: Modern Clean (Dark)
 description: Strict colour-only derivative of Modern Clean Light using shared structure
   plus a minimal dark colour map.
@@ -128,19 +128,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body #app-sidebar,
-
-  html body aside#app-sidebar {
-
-  width: 12rem !important;
-
-  min-width: 12rem !important;
-
-  max-width: 12rem !important;
-
-  flex: 0 0 12rem !important;
-
-  }
+  aside#app-sidebar:not(.lg\:w-14){width:13rem!important}
 
   /* Sidebar system status: compact no-wrap three-line block */
 
@@ -489,11 +477,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside nav a,
-
-  html body aside nav [role="link"],
-
-  html body aside [role="navigation"] a {
+  html body aside :is(nav a,nav [role="link"],[role="navigation"] a){
 
   background: transparent !important;
 
@@ -501,37 +485,11 @@ customCSS: '/* Modern Clean protected invariants */
 
   -webkit-text-fill-color: #b8c4d3 !important;
 
-  font-size: 0.8rem !important;
-
-  font-weight: 700 !important;
-
-  line-height: 1.25 !important;
-
-  text-transform: uppercase !important;
-
-  letter-spacing: 0.012em !important;
-
-  padding-left: 0.78rem !important;
-
-  padding-right: 0.78rem !important;
-
-  padding-top: 0.1rem !important;
-
-  padding-bottom: 0.1rem !important;
-
-  gap: 0.6rem !important;
+  font-size:.875rem!important;font-weight:700!important;line-height:1.25!important;text-transform:uppercase!important;letter-spacing:.012em!important;padding-left:1.25rem!important;padding-right:1.25rem!important;padding-top:.625rem!important;padding-bottom:.625rem!important;gap:.75rem!important;
 
   }
 
-  html body aside nav a *,
-
-  html body aside nav [role="link"] *,
-
-  html body aside [role="navigation"] a *,
-
-  html body aside nav a span.truncate,
-
-  html body aside [role="navigation"] a span.truncate {
+  html body aside :is(nav a,nav [role="link"],[role="navigation"] a) :is(*,span.truncate){
 
   text-transform: uppercase !important;
 
@@ -1039,7 +997,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   min-width: 8.5rem !important;
 
-  max-width: min(100%, 12rem) !important;
+  max-width: min(100%, 13rem) !important;
 
   height: 2.25rem !important;
 
@@ -1148,7 +1106,8 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
+  aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"])
+  {
 
   display: flex !important;
 
@@ -1162,12 +1121,13 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) >
-  div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
+  aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"])
+  > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"])
+  {
 
   display: grid !important;
 
-  grid-template-columns: 7.2rem 3.05rem !important;
+  grid-template-columns: 8.2rem 3.05rem !important;
 
   align-items: stretch !important;
 
@@ -1175,9 +1135,9 @@ customCSS: '/* Modern Clean protected invariants */
 
   gap: 0.4rem !important;
 
-  width: min(100%, 10.65rem) !important;
+  width: min(100%, 11.65rem) !important;
 
-  max-width: 10.65rem !important;
+  max-width: 11.65rem !important;
 
   min-width: 0 !important;
 
@@ -1187,28 +1147,29 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) >
-  div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) >
-  div.relative {
+  aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"])
+  > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"])
+  > div.relative {
 
   min-width: 0 !important;
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"],
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child >
+  button[aria-haspopup="listbox"],
 
-  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
   > button[aria-haspopup="listbox"] {
 
   display: flex !important;
 
-  width: 7.2rem !important;
+  width: 8.2rem !important;
 
-  min-width: 7.2rem !important;
+  min-width: 8.2rem !important;
 
-  max-width: 7.2rem !important;
+  max-width: 8.2rem !important;
 
-  flex: 0 0 7.2rem !important;
+  flex: 0 0 8.2rem !important;
 
   height: 2.65rem !important;
 
@@ -1224,10 +1185,10 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"]
-  > span,
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child >
+  button[aria-haspopup="listbox"] > span,
 
-  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
   > button[aria-haspopup="listbox"] > span {
 
   display: grid !important;
@@ -1246,10 +1207,10 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"]
-  svg,
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child >
+  button[aria-haspopup="listbox"] svg,
 
-  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
   > button[aria-haspopup="listbox"] svg {
 
   width: 1.18rem !important;
@@ -1268,10 +1229,10 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"]
-  > span > span,
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child >
+  button[aria-haspopup="listbox"] > span > span,
 
-  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
   > button[aria-haspopup="listbox"] > span > span {
 
   position: relative !important;
@@ -1296,10 +1257,10 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"]
-  > span > span::after,
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child >
+  button[aria-haspopup="listbox"] > span > span::after,
 
-  html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"])
   > button[aria-haspopup="listbox"] > span > span::after {
 
   content: "MODERN CLEAN\A(DARK)" !important;
@@ -1328,7 +1289,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"]
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"]
   > button[aria-haspopup="listbox"] {
 
   display: flex !important;
@@ -1355,7 +1316,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"]
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"]
   > button[aria-haspopup="listbox"] > span {
 
   display: flex !important;
@@ -1374,7 +1335,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"]
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"]
   > button[aria-haspopup="listbox"] .fi {
 
   flex: 0 0 auto !important;
@@ -1387,7 +1348,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   }
 
-  html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"]
+  aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"]
   > button[aria-haspopup="listbox"] > span > span:not(.fi) {
 
   display: inline-flex !important;

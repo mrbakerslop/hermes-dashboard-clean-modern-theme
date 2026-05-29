@@ -26,13 +26,7 @@ body header:not([role="banner"]) span[class*="font-sans"][style*="mix-blend-mode
   mix-blend-mode: normal !important;
   text-transform: uppercase !important;
 }
-html body #app-sidebar,
-html body aside#app-sidebar {
-  width: 12rem !important;
-  min-width: 12rem !important;
-  max-width: 12rem !important;
-  flex: 0 0 12rem !important;
-}
+aside#app-sidebar:not(.lg\:w-14){width:13rem!important}
 
 /* Sidebar system status: compact no-wrap three-line block */
 html body aside > div[class*="border-t"]:has(> a[href="/sessions"]) > span {
@@ -230,29 +224,14 @@ html body [class*="bg-green"] {
 }
 
 
-html body aside nav a,
-html body aside nav [role="link"],
-html body aside [role="navigation"] a {
+html body aside :is(nav a,nav [role="link"],[role="navigation"] a){
   background: transparent !important;
   color: #3f4750 !important;
   -webkit-text-fill-color: #3f4750 !important;
-  font-size: 0.8rem !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.012em !important;
-  padding-left: 0.78rem !important;
-  padding-right: 0.78rem !important;
-  padding-top: 0.1rem !important;
-  padding-bottom: 0.1rem !important;
-  gap: 0.6rem !important;
+font-size:.875rem!important;font-weight:700!important;line-height:1.25!important;text-transform:uppercase!important;letter-spacing:.012em!important;padding-left:1.25rem!important;padding-right:1.25rem!important;padding-top:.625rem!important;padding-bottom:.625rem!important;gap:.75rem!important;
 }
 
-html body aside nav a *,
-html body aside nav [role="link"] *,
-html body aside [role="navigation"] a *,
-html body aside nav a span.truncate,
-html body aside [role="navigation"] a span.truncate {
+html body aside :is(nav a,nav [role="link"],[role="navigation"] a) :is(*,span.truncate){
   text-transform: uppercase !important;
   letter-spacing: 0.012em !important;
 }
@@ -528,7 +507,7 @@ html body aside button[title][class*="normal-case"][class*="tracking-normal"]:no
   display: inline-flex !important;
   width: auto !important;
   min-width: 8.5rem !important;
-  max-width: min(100%, 12rem) !important;
+  max-width: min(100%, 13rem) !important;
   height: 2.25rem !important;
   min-height: 2.25rem !important;
   padding: 0 0.72rem !important;
@@ -584,7 +563,7 @@ html body aside > div[class*="items-center"][class*="justify-between"]:has(butto
   white-space: nowrap !important;
 }
 
-html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
+aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -592,30 +571,30 @@ html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) {
   padding-right: 0.75rem !important;
 }
 
-html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
+aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) {
   display: grid !important;
-  grid-template-columns: 7.2rem 3.05rem !important;
+  grid-template-columns: 8.2rem 3.05rem !important;
   align-items: stretch !important;
   justify-content: center !important;
   gap: 0.4rem !important;
-  width: min(100%, 10.65rem) !important;
-  max-width: 10.65rem !important;
+  width: min(100%, 11.65rem) !important;
+  max-width: 11.65rem !important;
   min-width: 0 !important;
   margin-left: auto !important;
   margin-right: auto !important;
 }
 
-html body aside > div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) > div.relative {
+aside:not(.lg\:w-14)> div[class*="border-t"]:has(button[aria-haspopup="listbox"]) > div[class*="items-center"]:has(> div.relative button[aria-haspopup="listbox"]) > div.relative {
   min-width: 0 !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"],
-html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"],
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] {
   display: flex !important;
-  width: 7.2rem !important;
-  min-width: 7.2rem !important;
-  max-width: 7.2rem !important;
-  flex: 0 0 7.2rem !important;
+  width: 8.2rem !important;
+  min-width: 8.2rem !important;
+  max-width: 8.2rem !important;
+  flex: 0 0 8.2rem !important;
   height: 2.65rem !important;
   min-height: 2.65rem !important;
   padding: 0 0.58rem !important;
@@ -624,8 +603,8 @@ html body aside > div[class*="border-t"] > div > div.relative:not([class*="inlin
   overflow: hidden !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span,
-html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span,
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span {
   display: grid !important;
   grid-template-columns: 1.05rem minmax(0, 1fr) !important;
   align-items: center !important;
@@ -635,8 +614,8 @@ html body aside > div[class*="border-t"] > div > div.relative:not([class*="inlin
   min-width: 0 !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] svg,
-html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] svg {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] svg,
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] svg {
   width: 1.18rem !important;
   height: 1.18rem !important;
   flex: 0 0 1.18rem !important;
@@ -646,8 +625,8 @@ html body aside > div[class*="border-t"] > div > div.relative:not([class*="inlin
   opacity: 1 !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span,
-html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span,
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span {
   position: relative !important;
   min-width: 0 !important;
   overflow: visible !important;
@@ -660,8 +639,8 @@ html body aside > div[class*="border-t"] > div > div.relative:not([class*="inlin
   text-transform: none !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span::after,
-html body aside > div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span::after {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:first-child > button[aria-haspopup="listbox"] > span > span::after,
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative:not([class*="inline-flex"]) > button[aria-haspopup="listbox"] > span > span::after {
   content: "MODERN CLEAN\A(LIGHT)" !important;
   display: block !important;
   white-space: pre !important;
@@ -676,7 +655,7 @@ html body aside > div[class*="border-t"] > div > div.relative:not([class*="inlin
   text-transform: uppercase !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] {
   display: flex !important;
   width: 3.05rem !important;
   min-width: 3.05rem !important;
@@ -690,7 +669,7 @@ html body aside > div[class*="border-t"] > div > div.relative[class*="inline-fle
   overflow: hidden !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -700,14 +679,14 @@ html body aside > div[class*="border-t"] > div > div.relative[class*="inline-fle
   min-width: 0 !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] .fi {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] .fi {
   flex: 0 0 auto !important;
   font-size: 0.88rem !important;
   line-height: 1 !important;
   margin: 0 !important;
 }
 
-html body aside > div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span > span:not(.fi) {
+aside:not(.lg\:w-14)> div[class*="border-t"] > div > div.relative[class*="inline-flex"] > button[aria-haspopup="listbox"] > span > span:not(.fi) {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;

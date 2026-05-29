@@ -2,6 +2,22 @@
 
 Modern Clean Theme for Hermes Agent Dashboard.
 
+## Installation
+
+For normal use, copy only the generated theme YAML files. You do **not** need to copy this repository, the `themes/` source files, scripts, notes, or workflow documents into a Hermes profile.
+
+1. Download or copy these files from `dist/` or from the latest GitHub release assets:
+   - `modern-clean-light.yaml`
+   - `modern-clean-dark.yaml`
+2. Place them in your Hermes Dashboard theme directory, for example:
+   ```bash
+   mkdir -p "$HOME/.hermes/dashboard-themes"
+   cp modern-clean-light.yaml modern-clean-dark.yaml "$HOME/.hermes/dashboard-themes/"
+   ```
+3. Refresh the Hermes Dashboard and select **Modern Clean (Light)** or **Modern Clean (Dark)** from the theme switcher.
+
+Agents installing the theme should stop after copying the `.yaml` files. The rest of this repository is the maintainer workflow for editing, validating, previewing, and releasing the themes.
+
 ## Screenshots
 
 ### Light
@@ -84,7 +100,7 @@ Light and Dark no longer share a runtime chrome stack, and Dark is no longer der
 Protected invariants currently include:
 
 - Hermes Agent wordmark casing, size, font, and theme-specific colour mapping.
-- Desktop sidebar width.
+- Desktop sidebar width, collapse behaviour, and smooth collapse/expand animation.
 - Theme switcher selected-label behaviour.
 - Sidebar footer version/org no-wrap behaviour.
 - Header/log controls casing.
