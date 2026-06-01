@@ -142,6 +142,19 @@ def validate_sidebar_system_status_guard(data: dict, source: str) -> list[str]:
     return [f"{source}: sidebar system status no-wrap guard missing before dashboard cap: {', '.join(missing)}"] if missing else []
 
 
+def validate_sidebar_nav_density_guard(data: dict, source: str) -> list[str]:
+    css = (data.get("customCSS") or "")[:MAX_DASHBOARD_CSS]
+    required = [
+        "html body aside :is(nav a,nav [role=\"link\"],[role=\"navigation\"] a)",
+        "font-size:.8rem!important",
+        "line-height:1.2!important",
+        "padding-top:.225rem!important",
+        "padding-bottom:.225rem!important",
+    ]
+    missing = [needle for needle in required if needle not in css]
+    return [f"{source}: sidebar nav density guard missing before dashboard cap: {', '.join(missing)}"] if missing else []
+
+
 def validate_button_polarity_guard(data: dict, source: str) -> list[str]:
     css = (data.get("customCSS") or "")[:MAX_DASHBOARD_CSS]
     is_dark = "modern-clean-dark" in str(data.get("name", ""))
@@ -316,6 +329,7 @@ def run_guards(data: dict, source: str) -> list[str]:
     errors.extend(validate_wordmark_guard(data, source))
     errors.extend(validate_sidebar_footer_guard(data, source))
     errors.extend(validate_sidebar_system_status_guard(data, source))
+    errors.extend(validate_sidebar_nav_density_guard(data, source))
     errors.extend(validate_button_polarity_guard(data, source))
     errors.extend(validate_logs_uppercase_guard(data, source))
     errors.extend(validate_dashboard_button_casing_guard(data, source))

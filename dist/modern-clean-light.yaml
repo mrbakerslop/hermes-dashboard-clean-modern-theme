@@ -509,7 +509,7 @@ customCSS: '/* Modern Clean protected invariants */
 
   -webkit-text-fill-color: #3f4750 !important;
 
-  font-size:.875rem!important;font-weight:700!important;line-height:1.25!important;text-transform:uppercase!important;letter-spacing:.012em!important;padding-left:1.25rem!important;padding-right:1.25rem!important;padding-top:.625rem!important;padding-bottom:.625rem!important;gap:.75rem!important;
+  font-size:.8rem!important;font-weight:700!important;line-height:1.2!important;text-transform:uppercase!important;letter-spacing:.012em!important;padding-left:1.25rem!important;padding-right:1.25rem!important;padding-top:.225rem!important;padding-bottom:.225rem!important;gap:.75rem!important;
 
   }
 
