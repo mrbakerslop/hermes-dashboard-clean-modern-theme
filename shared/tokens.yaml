@@ -18,6 +18,7 @@ componentStyles:
     background: "#f7f7f5"
   backdrop:
     background: "#f7f7f5"
+    bgBlendMode: "normal"
     fillerOpacity: "0"
     fillerBlendMode: "normal"
   header:

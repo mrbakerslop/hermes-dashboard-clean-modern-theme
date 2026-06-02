@@ -11,6 +11,10 @@ palette:
     alpha: 1.0
   foreground:
     hex: "#ffffff"
-    alpha: 0.85
+    alpha: 0
   warmGlow: "rgba(220, 224, 228, 0.22)"
   noiseOpacity: 0.08
+
+seriesColors:
+  inputTokenAccent: "#475569"
+  outputTokenAccent: "#1f5a35"

@@ -11,9 +11,13 @@ palette:
     alpha: 1.0
   foreground:
     hex: "#101722"
-    alpha: 0.92
+    alpha: 0
   warmGlow: "rgba(14, 20, 31, 0.32)"
   noiseOpacity: 0.03
+
+seriesColors:
+  inputTokenAccent: "#d7dde6"
+  outputTokenAccent: "#63d982"
 
 componentStyles:
   page:

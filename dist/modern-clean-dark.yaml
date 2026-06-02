@@ -17,6 +17,7 @@ componentStyles:
     background: '#080b10'
   backdrop:
     background: '#080b10'
+    bgBlendMode: normal
     fillerOpacity: '0'
     fillerBlendMode: normal
   header:
@@ -72,10 +73,15 @@ palette:
     alpha: 1.0
   foreground:
     hex: '#101722'
-    alpha: 0.92
+    alpha: 0
   warmGlow: rgba(14, 20, 31, 0.32)
   noiseOpacity: 0.03
+seriesColors:
+  inputTokenAccent: '#d7dde6'
+  outputTokenAccent: '#63d982'
 customCSS: '/* Modern Clean protected invariants */
+
+  :root{--series-input-token:#d7dde6;--series-output-token:#63d982}
 
   /* Hermes Agent wordmark */
 
@@ -1498,7 +1504,11 @@ customCSS: '/* Modern Clean protected invariants */
 
   .pointer-events-none.fixed.inset-0.z-\[99\],
 
-  .pointer-events-none.fixed.inset-0.z-\[101\] {
+  .pointer-events-none.fixed.inset-0.z-\[101\],
+
+  .pointer-events-none.fixed.inset-0.z-\[200\],
+
+  .pointer-events-none.fixed.inset-0.z-\[201\] {
 
   opacity: 0 !important;
 

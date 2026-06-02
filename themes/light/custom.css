@@ -1,4 +1,5 @@
 /* Modern Clean protected invariants */
+:root{--series-input-token:#475569;--series-output-token:#1f5a35}
 
 /* Hermes Agent wordmark */
 body aside > div:first-child .text-midground[style*="plus-lighter"],
@@ -769,7 +770,9 @@ html body aside > div[class*="border-t"]:has(> div button[aria-haspopup="listbox
 }
 
 .pointer-events-none.fixed.inset-0.z-\[99\],
-.pointer-events-none.fixed.inset-0.z-\[101\] {
+.pointer-events-none.fixed.inset-0.z-\[101\],
+.pointer-events-none.fixed.inset-0.z-\[200\],
+.pointer-events-none.fixed.inset-0.z-\[201\] {
   opacity: 0 !important;
 }
 
